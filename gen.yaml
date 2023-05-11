@@ -1,0 +1,9 @@
+configVersion: 1.0.0
+generation:
+  sdkClassName: SDK
+  singleTagPerOp: false
+  telemetryEnabled: false
+php:
+  version: 0.0.1
+  namespace: airbyte\airbyte_oss
+  packageName: airbyte/airbyte-oss
