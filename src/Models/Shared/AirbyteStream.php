@@ -79,10 +79,10 @@ class AirbyteStream
     /**
      * $supportedSyncModes
      * 
-     * @var ?array<\airbyte\airbyte_oss\Models\Shared\SyncModeEnum> $supportedSyncModes
+     * @var ?array<\airbyte\airbyte_oss\Models\Shared\SyncMode> $supportedSyncModes
      */
 	#[\JMS\Serializer\Annotation\SerializedName('supportedSyncModes')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\SyncModeEnum>>')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\SyncMode>>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $supportedSyncModes = null;
     

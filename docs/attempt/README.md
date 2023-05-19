@@ -75,7 +75,7 @@ use \airbyte\airbyte_oss\Models\Shared\ConnectionState;
 use \airbyte\airbyte_oss\Models\Shared\GlobalState;
 use \airbyte\airbyte_oss\Models\Shared\StreamState;
 use \airbyte\airbyte_oss\Models\Shared\StreamDescriptor;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStateType;
 
 $sdk = SDK::builder()
     ->build();
@@ -102,7 +102,7 @@ try {
     $request->syncConfig->state->state = [
         'impedit' => 'cum',
     ];
-    $request->syncConfig->state->stateType = ConnectionStateTypeEnum::STREAM;
+    $request->syncConfig->state->stateType = ConnectionStateType::STREAM;
     $request->syncConfig->state->streamState = [
         new StreamState(),
     ];

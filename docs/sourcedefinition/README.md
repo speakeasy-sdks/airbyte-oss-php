@@ -36,7 +36,7 @@ use \airbyte\airbyte_oss\Models\Shared\SourceDefinitionCreate;
 use \airbyte\airbyte_oss\Models\Shared\ActorDefinitionResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\ResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\JobTypeResourceLimit;
-use \airbyte\airbyte_oss\Models\Shared\JobTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\JobType;
 
 $sdk = SDK::builder()
     ->build();
@@ -370,7 +370,7 @@ use \airbyte\airbyte_oss\Models\Shared\SourceDefinitionUpdate;
 use \airbyte\airbyte_oss\Models\Shared\ActorDefinitionResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\ResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\JobTypeResourceLimit;
-use \airbyte\airbyte_oss\Models\Shared\JobTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\JobType;
 
 $sdk = SDK::builder()
     ->build();

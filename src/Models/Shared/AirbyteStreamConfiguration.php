@@ -38,8 +38,8 @@ class AirbyteStreamConfiguration
     public ?array $cursorField = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('destinationSyncMode')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum>')]
-    public DestinationSyncModeEnum $destinationSyncMode;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\DestinationSyncMode>')]
+    public DestinationSyncMode $destinationSyncMode;
     
     /**
      * Whether field selection should be enabled. If this is true, only the properties in `selectedFields` will be included.
@@ -92,19 +92,19 @@ class AirbyteStreamConfiguration
     public ?bool $suggested = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('syncMode')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SyncModeEnum>')]
-    public SyncModeEnum $syncMode;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SyncMode>')]
+    public SyncMode $syncMode;
     
 	public function __construct()
 	{
 		$this->aliasName = null;
 		$this->cursorField = null;
-		$this->destinationSyncMode = \airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum::APPEND;
+		$this->destinationSyncMode = \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode::APPEND;
 		$this->fieldSelectionEnabled = null;
 		$this->primaryKey = null;
 		$this->selected = null;
 		$this->selectedFields = null;
 		$this->suggested = null;
-		$this->syncMode = \airbyte\airbyte_oss\Models\Shared\SyncModeEnum::FULL_REFRESH;
+		$this->syncMode = \airbyte\airbyte_oss\Models\Shared\SyncMode::FULL_REFRESH;
 	}
 }

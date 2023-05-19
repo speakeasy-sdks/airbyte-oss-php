@@ -40,9 +40,9 @@ class WebBackendConnectionListItem
     public ?int $latestSyncJobCreatedAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('latestSyncJobStatus')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatusEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?JobStatusEnum $latestSyncJobStatus = null;
+    public ?JobStatus $latestSyncJobStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -61,16 +61,16 @@ class WebBackendConnectionListItem
     /**
      * determine how the schedule data should be interpreted
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum $scheduleType
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType $scheduleType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('scheduleType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ConnectionScheduleTypeEnum $scheduleType = null;
+    public ?ConnectionScheduleType $scheduleType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('schemaChange')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SchemaChangeEnum>')]
-    public SchemaChangeEnum $schemaChange;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SchemaChange>')]
+    public SchemaChange $schemaChange;
     
 	#[\JMS\Serializer\Annotation\SerializedName('source')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\SourceSnippetRead')]
@@ -79,11 +79,11 @@ class WebBackendConnectionListItem
     /**
      * Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
      * 
-     * @var \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum $status
+     * @var \airbyte\airbyte_oss\Models\Shared\ConnectionStatus $status
      */
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum>')]
-    public ConnectionStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatus>')]
+    public ConnectionStatus $status;
     
 	public function __construct()
 	{
@@ -95,8 +95,8 @@ class WebBackendConnectionListItem
 		$this->name = "";
 		$this->scheduleData = null;
 		$this->scheduleType = null;
-		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChangeEnum::NO_CHANGE;
+		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChange::NO_CHANGE;
 		$this->source = new \airbyte\airbyte_oss\Models\Shared\SourceSnippetRead();
-		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum::ACTIVE;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::ACTIVE;
 	}
 }

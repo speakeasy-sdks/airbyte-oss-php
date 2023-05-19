@@ -16,8 +16,8 @@ class StreamTransform
     public StreamDescriptor $streamDescriptor;
     
 	#[\JMS\Serializer\Annotation\SerializedName('transformType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\StreamTransformTransformTypeEnum>')]
-    public StreamTransformTransformTypeEnum $transformType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\StreamTransformTransformType>')]
+    public StreamTransformTransformType $transformType;
     
     /**
      * list of field transformations. order does not matter.
@@ -32,7 +32,7 @@ class StreamTransform
 	public function __construct()
 	{
 		$this->streamDescriptor = new \airbyte\airbyte_oss\Models\Shared\StreamDescriptor();
-		$this->transformType = \airbyte\airbyte_oss\Models\Shared\StreamTransformTransformTypeEnum::ADD_STREAM;
+		$this->transformType = \airbyte\airbyte_oss\Models\Shared\StreamTransformTransformType::ADD_STREAM;
 		$this->updateStream = null;
 	}
 }

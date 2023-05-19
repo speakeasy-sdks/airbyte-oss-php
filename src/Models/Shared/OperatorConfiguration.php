@@ -22,8 +22,8 @@ class OperatorConfiguration
     public ?OperatorNormalization $normalization = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('operatorType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorTypeEnum>')]
-    public OperatorTypeEnum $operatorType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorType>')]
+    public OperatorType $operatorType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('webhook')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\OperatorWebhook')]
@@ -34,7 +34,7 @@ class OperatorConfiguration
 	{
 		$this->dbt = null;
 		$this->normalization = null;
-		$this->operatorType = \airbyte\airbyte_oss\Models\Shared\OperatorTypeEnum::NORMALIZATION;
+		$this->operatorType = \airbyte\airbyte_oss\Models\Shared\OperatorType::NORMALIZATION;
 		$this->webhook = null;
 	}
 }

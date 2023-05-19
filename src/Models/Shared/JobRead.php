@@ -16,8 +16,8 @@ class JobRead
     public string $configId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('configType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum>')]
-    public JobConfigTypeEnum $configType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigType>')]
+    public JobConfigType $configType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('createdAt')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -43,8 +43,8 @@ class JobRead
     public ?int $startedAt = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatusEnum>')]
-    public JobStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatus>')]
+    public JobStatus $status;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updatedAt')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -53,12 +53,12 @@ class JobRead
 	public function __construct()
 	{
 		$this->configId = "";
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
 		$this->createdAt = 0;
 		$this->id = 0;
 		$this->resetConfig = null;
 		$this->startedAt = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatusEnum::PENDING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::PENDING;
 		$this->updatedAt = 0;
 	}
 }

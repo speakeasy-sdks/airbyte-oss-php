@@ -41,8 +41,8 @@ class FieldTransform
     public ?FieldRemove $removeField = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('transformType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\FieldTransformTransformTypeEnum>')]
-    public FieldTransformTransformTypeEnum $transformType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\FieldTransformTransformType>')]
+    public FieldTransformTransformType $transformType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updateFieldSchema')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\FieldSchemaUpdate')]
@@ -55,7 +55,7 @@ class FieldTransform
 		$this->breaking = false;
 		$this->fieldName = [];
 		$this->removeField = null;
-		$this->transformType = \airbyte\airbyte_oss\Models\Shared\FieldTransformTransformTypeEnum::ADD_FIELD;
+		$this->transformType = \airbyte\airbyte_oss\Models\Shared\FieldTransformTransformType::ADD_FIELD;
 		$this->updateFieldSchema = null;
 	}
 }

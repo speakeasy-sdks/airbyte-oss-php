@@ -20,8 +20,8 @@ class JobDebugRead
     public string $configId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('configType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum>')]
-    public JobConfigTypeEnum $configType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigType>')]
+    public JobConfigType $configType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('destinationDefinition')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\DestinationDefinitionRead')]
@@ -36,17 +36,17 @@ class JobDebugRead
     public SourceDefinitionRead $sourceDefinition;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatusEnum>')]
-    public JobStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobStatus>')]
+    public JobStatus $status;
     
 	public function __construct()
 	{
 		$this->airbyteVersion = "";
 		$this->configId = "";
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
 		$this->destinationDefinition = new \airbyte\airbyte_oss\Models\Shared\DestinationDefinitionRead();
 		$this->id = 0;
 		$this->sourceDefinition = new \airbyte\airbyte_oss\Models\Shared\SourceDefinitionRead();
-		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatusEnum::PENDING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::PENDING;
 	}
 }

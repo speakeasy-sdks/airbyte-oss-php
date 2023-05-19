@@ -27,9 +27,9 @@ class WorkspaceRead
     public string $customerId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('defaultGeography')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\GeographyEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\Geography>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GeographyEnum $defaultGeography = null;
+    public ?Geography $defaultGeography = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('displaySetupWizard')]
     #[\JMS\Serializer\Annotation\Type('bool')]

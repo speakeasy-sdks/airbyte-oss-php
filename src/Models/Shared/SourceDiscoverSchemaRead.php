@@ -50,12 +50,12 @@ class SourceDiscoverSchemaRead
     /**
      * Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum $connectionStatus
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStatus $connectionStatus
      */
 	#[\JMS\Serializer\Annotation\SerializedName('connectionStatus')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ConnectionStatusEnum $connectionStatus = null;
+    public ?ConnectionStatus $connectionStatus = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('jobInfo')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\SynchronousJobRead')]

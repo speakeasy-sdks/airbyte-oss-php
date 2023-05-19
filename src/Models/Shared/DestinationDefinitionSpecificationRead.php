@@ -53,10 +53,10 @@ class DestinationDefinitionSpecificationRead
     /**
      * $supportedDestinationSyncModes
      * 
-     * @var ?array<\airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum> $supportedDestinationSyncModes
+     * @var ?array<\airbyte\airbyte_oss\Models\Shared\DestinationSyncMode> $supportedDestinationSyncModes
      */
 	#[\JMS\Serializer\Annotation\SerializedName('supportedDestinationSyncModes')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum>>')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\DestinationSyncMode>>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?array $supportedDestinationSyncModes = null;
     

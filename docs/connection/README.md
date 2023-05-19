@@ -30,24 +30,24 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionCreate;
-use \airbyte\airbyte_oss\Models\Shared\GeographyEnum;
-use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum;
-use \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreferenceEnum;
+use \airbyte\airbyte_oss\Models\Shared\Geography;
+use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType;
+use \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference;
 use \airbyte\airbyte_oss\Models\Shared\ResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleData;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataCron;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStatus;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamAndConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamConfiguration;
-use \airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode;
 use \airbyte\airbyte_oss\Models\Shared\SelectedFieldInfo;
-use \airbyte\airbyte_oss\Models\Shared\SyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\SyncMode;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStream;
 
 $sdk = SDK::builder()
@@ -56,11 +56,11 @@ $sdk = SDK::builder()
 try {
     $request = new ConnectionCreate();
     $request->destinationId = '929396fe-a759-46eb-90fa-aa2352c59559';
-    $request->geography = GeographyEnum::AUTO;
+    $request->geography = Geography::AUTO;
     $request->name = 'Cecilia Yundt MD';
-    $request->namespaceDefinition = NamespaceDefinitionTypeEnum::SOURCE;
+    $request->namespaceDefinition = NamespaceDefinitionType::SOURCE;
     $request->namespaceFormat = '${SOURCE_NAMESPACE}';
-    $request->nonBreakingChangesPreference = NonBreakingChangesPreferenceEnum::DISABLE;
+    $request->nonBreakingChangesPreference = NonBreakingChangesPreference::DISABLE;
     $request->notifySchemaChanges = false;
     $request->operationIds = [
         'fa946773-9251-4aa5-ac3f-5ad019da1ffe',
@@ -72,19 +72,19 @@ try {
     $request->resourceRequirements->memoryLimit = 'ipsa';
     $request->resourceRequirements->memoryRequest = 'omnis';
     $request->schedule = new ConnectionSchedule();
-    $request->schedule->timeUnit = ConnectionScheduleTimeUnitEnum::DAYS;
+    $request->schedule->timeUnit = ConnectionScheduleTimeUnit::DAYS;
     $request->schedule->units = 739264;
     $request->scheduleData = new ConnectionScheduleData();
     $request->scheduleData->basicSchedule = new ConnectionScheduleDataBasicSchedule();
-    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnitEnum::MINUTES;
+    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnit::MINUTES;
     $request->scheduleData->basicSchedule->units = 39187;
     $request->scheduleData->cron = new ConnectionScheduleDataCron();
     $request->scheduleData->cron->cronExpression = 'reprehenderit';
     $request->scheduleData->cron->cronTimeZone = 'ut';
-    $request->scheduleType = ConnectionScheduleTypeEnum::CRON;
+    $request->scheduleType = ConnectionScheduleType::CRON;
     $request->sourceCatalogId = '15471b5e-6e13-4b99-9488-e1e91e450ad2';
     $request->sourceId = 'abd44269-802d-4502-a94b-b4f63c969e9a';
-    $request->status = ConnectionStatusEnum::ACTIVE;
+    $request->status = ConnectionStatus::ACTIVE;
     $request->syncCatalog = new AirbyteCatalog();
     $request->syncCatalog->streams = [
         new AirbyteStreamAndConfiguration(),
@@ -278,16 +278,16 @@ require_once 'vendor/autoload.php';
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionSearch;
 use \airbyte\airbyte_oss\Models\Shared\DestinationSearch;
-use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleData;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataCron;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType;
 use \airbyte\airbyte_oss\Models\Shared\SourceSearch;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStatus;
 
 $sdk = SDK::builder()
     ->build();
@@ -304,20 +304,20 @@ try {
     $request->destination->workspaceId = 'a73429cd-b1a8-4422-bb67-9d2322715bf0';
     $request->destinationId = 'cbb1e31b-8b90-4f34-83a1-108e0adcf4b9';
     $request->name = 'Amy Langworth';
-    $request->namespaceDefinition = NamespaceDefinitionTypeEnum::CUSTOMFORMAT;
+    $request->namespaceDefinition = NamespaceDefinitionType::CUSTOMFORMAT;
     $request->namespaceFormat = '${SOURCE_NAMESPACE}';
     $request->prefix = 'quisquam';
     $request->schedule = new ConnectionSchedule();
-    $request->schedule->timeUnit = ConnectionScheduleTimeUnitEnum::MONTHS;
+    $request->schedule->timeUnit = ConnectionScheduleTimeUnit::MONTHS;
     $request->schedule->units = 606476;
     $request->scheduleData = new ConnectionScheduleData();
     $request->scheduleData->basicSchedule = new ConnectionScheduleDataBasicSchedule();
-    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnitEnum::HOURS;
+    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnit::HOURS;
     $request->scheduleData->basicSchedule->units = 218403;
     $request->scheduleData->cron = new ConnectionScheduleDataCron();
     $request->scheduleData->cron->cronExpression = 'delectus';
     $request->scheduleData->cron->cronTimeZone = 'voluptate';
-    $request->scheduleType = ConnectionScheduleTypeEnum::MANUAL;
+    $request->scheduleType = ConnectionScheduleType::MANUAL;
     $request->source = new SourceSearch();
     $request->source->connectionConfiguration = 'vero';
     $request->source->name = 'Julio Weissnat';
@@ -326,7 +326,7 @@ try {
     $request->source->sourceName = 'aut';
     $request->source->workspaceId = '08c42e14-1aac-4366-88dd-6b1442907474';
     $request->sourceId = '778a7bd4-66d2-48c1-8ab3-cdca4251904e';
-    $request->status = ConnectionStatusEnum::INACTIVE;
+    $request->status = ConnectionStatus::INACTIVE;
 
     $response = $sdk->connection->searchConnections($request);
 
@@ -388,24 +388,24 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionUpdate;
-use \airbyte\airbyte_oss\Models\Shared\GeographyEnum;
-use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum;
-use \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreferenceEnum;
+use \airbyte\airbyte_oss\Models\Shared\Geography;
+use \airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType;
+use \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference;
 use \airbyte\airbyte_oss\Models\Shared\ResourceRequirements;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleData;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicSchedule;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnitEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataBasicScheduleTimeUnit;
 use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleDataCron;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStatus;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamAndConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamConfiguration;
-use \airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode;
 use \airbyte\airbyte_oss\Models\Shared\SelectedFieldInfo;
-use \airbyte\airbyte_oss\Models\Shared\SyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\SyncMode;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStream;
 
 $sdk = SDK::builder()
@@ -415,11 +415,11 @@ try {
     $request = new ConnectionUpdate();
     $request->breakingChange = false;
     $request->connectionId = '482562f2-22e9-4817-ae17-cbe61e6b7b95';
-    $request->geography = GeographyEnum::EU;
+    $request->geography = Geography::EU;
     $request->name = 'Mark Nicolas';
-    $request->namespaceDefinition = NamespaceDefinitionTypeEnum::CUSTOMFORMAT;
+    $request->namespaceDefinition = NamespaceDefinitionType::CUSTOMFORMAT;
     $request->namespaceFormat = '${SOURCE_NAMESPACE}';
-    $request->nonBreakingChangesPreference = NonBreakingChangesPreferenceEnum::IGNORE;
+    $request->nonBreakingChangesPreference = NonBreakingChangesPreference::IGNORE;
     $request->notifySchemaChanges = false;
     $request->operationIds = [
         'c4f3789f-d871-4f99-9d2e-fd121aa6f1e6',
@@ -431,18 +431,18 @@ try {
     $request->resourceRequirements->memoryLimit = 'illum';
     $request->resourceRequirements->memoryRequest = 'soluta';
     $request->schedule = new ConnectionSchedule();
-    $request->schedule->timeUnit = ConnectionScheduleTimeUnitEnum::MINUTES;
+    $request->schedule->timeUnit = ConnectionScheduleTimeUnit::MINUTES;
     $request->schedule->units = 306986;
     $request->scheduleData = new ConnectionScheduleData();
     $request->scheduleData->basicSchedule = new ConnectionScheduleDataBasicSchedule();
-    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnitEnum::MONTHS;
+    $request->scheduleData->basicSchedule->timeUnit = ConnectionScheduleDataBasicScheduleTimeUnit::MONTHS;
     $request->scheduleData->basicSchedule->units = 119771;
     $request->scheduleData->cron = new ConnectionScheduleDataCron();
     $request->scheduleData->cron->cronExpression = 'ullam';
     $request->scheduleData->cron->cronTimeZone = 'reprehenderit';
-    $request->scheduleType = ConnectionScheduleTypeEnum::BASIC;
+    $request->scheduleType = ConnectionScheduleType::BASIC;
     $request->sourceCatalogId = '6082d68e-a19f-41d1-b051-339d08086a18';
-    $request->status = ConnectionStatusEnum::ACTIVE;
+    $request->status = ConnectionStatus::ACTIVE;
     $request->syncCatalog = new AirbyteCatalog();
     $request->syncCatalog->streams = [
         new AirbyteStreamAndConfiguration(),

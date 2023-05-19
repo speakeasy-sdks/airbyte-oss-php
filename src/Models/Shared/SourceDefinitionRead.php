@@ -60,9 +60,9 @@ class SourceDefinitionRead
     public ?\DateTime $releaseDate = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('releaseStage')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ReleaseStageEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ReleaseStage>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ReleaseStageEnum $releaseStage = null;
+    public ?ReleaseStage $releaseStage = null;
     
     /**
      * actor definition specific resource requirements. if default is set, these are the requirements that should be set for ALL jobs run for this actor definition. it is overriden by the job type specific configurations. if not set, the platform will use defaults. these values will be overriden by configuration at the connection level.
@@ -79,9 +79,9 @@ class SourceDefinitionRead
     public string $sourceDefinitionId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('sourceType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SourceDefinitionReadSourceTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SourceDefinitionReadSourceType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?SourceDefinitionReadSourceTypeEnum $sourceType = null;
+    public ?SourceDefinitionReadSourceType $sourceType = null;
     
 	public function __construct()
 	{

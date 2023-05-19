@@ -49,6 +49,8 @@ class Openapi
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/openapi');
         
         $options = ['http_errors' => false];
+        $options['headers']['Accept'] = 'text/plain';
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->_language, $this->_sdkVersion, $this->_genVersion);
         
         $httpResponse = $this->_defaultClient->request('GET', $url, $options);
         

@@ -12,9 +12,9 @@ namespace airbyte\airbyte_oss\Models\Shared;
 class AdvancedAuth
 {
 	#[\JMS\Serializer\Annotation\SerializedName('authFlowType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AdvancedAuthAuthFlowTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AdvancedAuthAuthFlowType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AdvancedAuthAuthFlowTypeEnum $authFlowType = null;
+    public ?AdvancedAuthAuthFlowType $authFlowType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('oauthConfigSpecification')]
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\OAuthConfigSpecification')]

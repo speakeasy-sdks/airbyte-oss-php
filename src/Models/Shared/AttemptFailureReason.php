@@ -19,22 +19,22 @@ class AttemptFailureReason
     /**
      * Indicates where the error originated. If not set, the origin of error is not well known.
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\AttemptFailureOriginEnum $failureOrigin
+     * @var ?\airbyte\airbyte_oss\Models\Shared\AttemptFailureOrigin $failureOrigin
      */
 	#[\JMS\Serializer\Annotation\SerializedName('failureOrigin')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptFailureOriginEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptFailureOrigin>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AttemptFailureOriginEnum $failureOrigin = null;
+    public ?AttemptFailureOrigin $failureOrigin = null;
     
     /**
      * Categorizes well known errors into types for programmatic handling. If not set, the type of error is not well known.
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\AttemptFailureTypeEnum $failureType
+     * @var ?\airbyte\airbyte_oss\Models\Shared\AttemptFailureType $failureType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('failureType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptFailureTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptFailureType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?AttemptFailureTypeEnum $failureType = null;
+    public ?AttemptFailureType $failureType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('internalMessage')]
     #[\JMS\Serializer\Annotation\Type('string')]

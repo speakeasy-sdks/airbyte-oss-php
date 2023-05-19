@@ -72,9 +72,9 @@ class DestinationDefinitionRead
     public ?\DateTime $releaseDate = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('releaseStage')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ReleaseStageEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ReleaseStage>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ReleaseStageEnum $releaseStage = null;
+    public ?ReleaseStage $releaseStage = null;
     
     /**
      * actor definition specific resource requirements. if default is set, these are the requirements that should be set for ALL jobs run for this actor definition. it is overriden by the job type specific configurations. if not set, the platform will use defaults. these values will be overriden by configuration at the connection level.

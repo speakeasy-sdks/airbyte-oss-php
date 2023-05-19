@@ -20,10 +20,10 @@ class WebBackendGeographiesListResult
     /**
      * $geographies
      * 
-     * @var array<\airbyte\airbyte_oss\Models\Shared\GeographyEnum> $geographies
+     * @var array<\airbyte\airbyte_oss\Models\Shared\Geography> $geographies
      */
 	#[\JMS\Serializer\Annotation\SerializedName('geographies')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\GeographyEnum>>')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\Geography>>')]
     public array $geographies;
     
 	public function __construct()

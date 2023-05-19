@@ -30,9 +30,9 @@ class ConnectionRead
     public string $destinationId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('geography')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\GeographyEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\Geography>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GeographyEnum $geography = null;
+    public ?Geography $geography = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('name')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -41,12 +41,12 @@ class ConnectionRead
     /**
      * Method used for computing final namespace in destination
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum $namespaceDefinition
+     * @var ?\airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType $namespaceDefinition
      */
 	#[\JMS\Serializer\Annotation\SerializedName('namespaceDefinition')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NamespaceDefinitionTypeEnum $namespaceDefinition = null;
+    public ?NamespaceDefinitionType $namespaceDefinition = null;
     
     /**
      * Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If "${SOURCE_NAMESPACE}" then behaves like namespaceDefinition = 'source'.
@@ -59,9 +59,9 @@ class ConnectionRead
     public ?string $namespaceFormat = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('nonBreakingChangesPreference')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreferenceEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NonBreakingChangesPreferenceEnum $nonBreakingChangesPreference = null;
+    public ?NonBreakingChangesPreference $nonBreakingChangesPreference = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notifySchemaChanges')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -121,12 +121,12 @@ class ConnectionRead
     /**
      * determine how the schedule data should be interpreted
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum $scheduleType
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType $scheduleType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('scheduleType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ConnectionScheduleTypeEnum $scheduleType = null;
+    public ?ConnectionScheduleType $scheduleType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('sourceCatalogId')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -140,11 +140,11 @@ class ConnectionRead
     /**
      * Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
      * 
-     * @var \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum $status
+     * @var \airbyte\airbyte_oss\Models\Shared\ConnectionStatus $status
      */
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum>')]
-    public ConnectionStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatus>')]
+    public ConnectionStatus $status;
     
     /**
      * describes the available schema (catalog).
@@ -174,7 +174,7 @@ class ConnectionRead
 		$this->scheduleType = null;
 		$this->sourceCatalogId = null;
 		$this->sourceId = "";
-		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum::ACTIVE;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::ACTIVE;
 		$this->syncCatalog = new \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog();
 	}
 }

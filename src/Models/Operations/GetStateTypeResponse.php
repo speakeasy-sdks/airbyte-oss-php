@@ -14,10 +14,10 @@ class GetStateTypeResponse
     /**
      * Successful operation
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum $connectionStateType
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStateType $connectionStateType
      */
 	
-    public ?\airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum $connectionStateType = null;
+    public ?\airbyte\airbyte_oss\Models\Shared\ConnectionStateType $connectionStateType = null;
     
 	
     public string $contentType;

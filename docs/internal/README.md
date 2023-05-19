@@ -27,7 +27,7 @@ use \airbyte\airbyte_oss\Models\Shared\ConnectionState;
 use \airbyte\airbyte_oss\Models\Shared\GlobalState;
 use \airbyte\airbyte_oss\Models\Shared\StreamState;
 use \airbyte\airbyte_oss\Models\Shared\StreamDescriptor;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStateType;
 
 $sdk = SDK::builder()
     ->build();
@@ -49,7 +49,7 @@ try {
     $request->connectionState->state = [
         'earum' => 'iusto',
     ];
-    $request->connectionState->stateType = ConnectionStateTypeEnum::GLOBAL;
+    $request->connectionState->stateType = ConnectionStateType::GLOBAL;
     $request->connectionState->streamState = [
         new StreamState(),
         new StreamState(),
@@ -164,7 +164,7 @@ use \airbyte\airbyte_oss\Models\Shared\ConnectionState;
 use \airbyte\airbyte_oss\Models\Shared\GlobalState;
 use \airbyte\airbyte_oss\Models\Shared\StreamState;
 use \airbyte\airbyte_oss\Models\Shared\StreamDescriptor;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStateType;
 
 $sdk = SDK::builder()
     ->build();
@@ -195,7 +195,7 @@ try {
         'explicabo' => 'exercitationem',
         'nihil' => 'non',
     ];
-    $request->syncConfig->state->stateType = ConnectionStateTypeEnum::GLOBAL;
+    $request->syncConfig->state->stateType = ConnectionStateType::GLOBAL;
     $request->syncConfig->state->streamState = [
         new StreamState(),
     ];
@@ -262,9 +262,9 @@ use \airbyte\airbyte_oss\Models\Shared\SourceDiscoverSchemaWriteRequestBody;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamAndConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamConfiguration;
-use \airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode;
 use \airbyte\airbyte_oss\Models\Shared\SelectedFieldInfo;
-use \airbyte\airbyte_oss\Models\Shared\SyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\SyncMode;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStream;
 
 $sdk = SDK::builder()

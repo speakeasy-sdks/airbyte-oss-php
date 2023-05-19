@@ -23,12 +23,12 @@ class NotificationRead
     public ?string $message = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NotificationReadStatusEnum>')]
-    public NotificationReadStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NotificationReadStatus>')]
+    public NotificationReadStatus $status;
     
 	public function __construct()
 	{
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\NotificationReadStatusEnum::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\NotificationReadStatus::SUCCEEDED;
 	}
 }

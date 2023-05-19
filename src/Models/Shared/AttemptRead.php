@@ -40,8 +40,8 @@ class AttemptRead
     public ?int $recordsSynced = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptStatusEnum>')]
-    public AttemptStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\AttemptStatus>')]
+    public AttemptStatus $status;
     
     /**
      * $streamStats
@@ -70,7 +70,7 @@ class AttemptRead
 		$this->failureSummary = null;
 		$this->id = 0;
 		$this->recordsSynced = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\AttemptStatusEnum::RUNNING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\AttemptStatus::RUNNING;
 		$this->streamStats = null;
 		$this->totalStats = null;
 		$this->updatedAt = 0;

@@ -27,9 +27,9 @@ class ConnectionUpdate
     public string $connectionId;
     
 	#[\JMS\Serializer\Annotation\SerializedName('geography')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\GeographyEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\Geography>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?GeographyEnum $geography = null;
+    public ?Geography $geography = null;
     
     /**
      * Name that will be set to this connection
@@ -44,12 +44,12 @@ class ConnectionUpdate
     /**
      * Method used for computing final namespace in destination
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum $namespaceDefinition
+     * @var ?\airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType $namespaceDefinition
      */
 	#[\JMS\Serializer\Annotation\SerializedName('namespaceDefinition')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NamespaceDefinitionType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NamespaceDefinitionTypeEnum $namespaceDefinition = null;
+    public ?NamespaceDefinitionType $namespaceDefinition = null;
     
     /**
      * Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If "${SOURCE_NAMESPACE}" then behaves like namespaceDefinition = 'source'.
@@ -62,9 +62,9 @@ class ConnectionUpdate
     public ?string $namespaceFormat = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('nonBreakingChangesPreference')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreferenceEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?NonBreakingChangesPreferenceEnum $nonBreakingChangesPreference = null;
+    public ?NonBreakingChangesPreference $nonBreakingChangesPreference = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notifySchemaChanges')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -124,12 +124,12 @@ class ConnectionUpdate
     /**
      * determine how the schedule data should be interpreted
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum $scheduleType
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType $scheduleType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('scheduleType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ConnectionScheduleTypeEnum $scheduleType = null;
+    public ?ConnectionScheduleType $scheduleType = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('sourceCatalogId')]
     #[\JMS\Serializer\Annotation\Type('string')]
@@ -139,12 +139,12 @@ class ConnectionUpdate
     /**
      * Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
      * 
-     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum $status
+     * @var ?\airbyte\airbyte_oss\Models\Shared\ConnectionStatus $status
      */
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatusEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStatus>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?ConnectionStatusEnum $status = null;
+    public ?ConnectionStatus $status = null;
     
     /**
      * describes the available schema (catalog).

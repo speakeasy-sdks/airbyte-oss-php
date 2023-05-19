@@ -18,8 +18,8 @@ namespace airbyte\airbyte_oss\Models\Shared;
 class ConnectionSchedule
 {
 	#[\JMS\Serializer\Annotation\SerializedName('timeUnit')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnitEnum>')]
-    public ConnectionScheduleTimeUnitEnum $timeUnit;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit>')]
+    public ConnectionScheduleTimeUnit $timeUnit;
     
 	#[\JMS\Serializer\Annotation\SerializedName('units')]
     #[\JMS\Serializer\Annotation\Type('int')]
@@ -27,7 +27,7 @@ class ConnectionSchedule
     
 	public function __construct()
 	{
-		$this->timeUnit = \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnitEnum::MINUTES;
+		$this->timeUnit = \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit::MINUTES;
 		$this->units = 0;
 	}
 }

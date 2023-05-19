@@ -407,9 +407,9 @@ use \airbyte\airbyte_oss\Models\Shared\SourceDiscoverSchemaWriteRequestBody;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamAndConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStreamConfiguration;
-use \airbyte\airbyte_oss\Models\Shared\DestinationSyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode;
 use \airbyte\airbyte_oss\Models\Shared\SelectedFieldInfo;
-use \airbyte\airbyte_oss\Models\Shared\SyncModeEnum;
+use \airbyte\airbyte_oss\Models\Shared\SyncMode;
 use \airbyte\airbyte_oss\Models\Shared\AirbyteStream;
 
 $sdk = SDK::builder()

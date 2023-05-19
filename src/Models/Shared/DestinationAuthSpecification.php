@@ -12,9 +12,9 @@ namespace airbyte\airbyte_oss\Models\Shared;
 class DestinationAuthSpecification
 {
 	#[\JMS\Serializer\Annotation\SerializedName('auth_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\DestinationAuthSpecificationAuthTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\DestinationAuthSpecificationAuthType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?DestinationAuthSpecificationAuthTypeEnum $authType = null;
+    public ?DestinationAuthSpecificationAuthType $authType = null;
     
     /**
      * An object containing any metadata needed to describe this connector's Oauth flow

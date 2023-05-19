@@ -20,11 +20,11 @@ class JobTypeResourceLimit
     /**
      * enum that describes the different types of jobs that the platform runs.
      * 
-     * @var \airbyte\airbyte_oss\Models\Shared\JobTypeEnum $jobType
+     * @var \airbyte\airbyte_oss\Models\Shared\JobType $jobType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('jobType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobTypeEnum>')]
-    public JobTypeEnum $jobType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobType>')]
+    public JobType $jobType;
     
     /**
      * optional resource requirements to run workers (blank for unbounded allocations)
@@ -37,7 +37,7 @@ class JobTypeResourceLimit
     
 	public function __construct()
 	{
-		$this->jobType = \airbyte\airbyte_oss\Models\Shared\JobTypeEnum::GET_SPEC;
+		$this->jobType = \airbyte\airbyte_oss\Models\Shared\JobType::GET_SPEC;
 		$this->resourceRequirements = new \airbyte\airbyte_oss\Models\Shared\ResourceRequirements();
 	}
 }

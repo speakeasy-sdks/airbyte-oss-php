@@ -18,14 +18,14 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\LogsRequestBody;
-use \airbyte\airbyte_oss\Models\Shared\LogTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\LogType;
 
 $sdk = SDK::builder()
     ->build();
 
 try {
     $request = new LogsRequestBody();
-    $request->logType = LogTypeEnum::SERVER;
+    $request->logType = LogType::SERVER;
 
     $response = $sdk->logs->getLogs($request);
 

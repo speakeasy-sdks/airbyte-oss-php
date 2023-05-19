@@ -23,12 +23,12 @@ class CheckOperationRead
     public ?string $message = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatusEnum>')]
-    public CheckOperationReadStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatus>')]
+    public CheckOperationReadStatus $status;
     
 	public function __construct()
 	{
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatusEnum::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatus::SUCCEEDED;
 	}
 }

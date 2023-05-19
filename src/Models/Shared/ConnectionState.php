@@ -37,8 +37,8 @@ class ConnectionState
     public ?array $state = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('stateType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum>')]
-    public ConnectionStateTypeEnum $stateType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStateType>')]
+    public ConnectionStateType $stateType;
     
     /**
      * $streamState
@@ -55,7 +55,7 @@ class ConnectionState
 		$this->connectionId = "";
 		$this->globalState = null;
 		$this->state = null;
-		$this->stateType = \airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum::GLOBAL;
+		$this->stateType = \airbyte\airbyte_oss\Models\Shared\ConnectionStateType::GLOBAL;
 		$this->streamState = null;
 	}
 }

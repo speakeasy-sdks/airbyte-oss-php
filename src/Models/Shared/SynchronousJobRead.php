@@ -22,8 +22,8 @@ class SynchronousJobRead
     public ?string $configId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('configType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum>')]
-    public JobConfigTypeEnum $configType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\JobConfigType>')]
+    public JobConfigType $configType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('connectorConfigurationUpdated')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -54,7 +54,7 @@ class SynchronousJobRead
 	public function __construct()
 	{
 		$this->configId = null;
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
 		$this->connectorConfigurationUpdated = null;
 		$this->createdAt = 0;
 		$this->endedAt = 0;

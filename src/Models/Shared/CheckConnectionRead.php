@@ -27,13 +27,13 @@ class CheckConnectionRead
     public ?string $message = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('status')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatusEnum>')]
-    public CheckConnectionReadStatusEnum $status;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatus>')]
+    public CheckConnectionReadStatus $status;
     
 	public function __construct()
 	{
 		$this->jobInfo = new \airbyte\airbyte_oss\Models\Shared\SynchronousJobRead();
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatusEnum::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatus::SUCCEEDED;
 	}
 }

@@ -214,7 +214,7 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\JobListRequestBody;
-use \airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\JobConfigType;
 use \airbyte\airbyte_oss\Models\Shared\Pagination;
 
 $sdk = SDK::builder()
@@ -224,7 +224,7 @@ try {
     $request = new JobListRequestBody();
     $request->configId = 'sed';
     $request->configTypes = [
-        JobConfigTypeEnum::CHECK_CONNECTION_SOURCE,
+        JobConfigType::CHECK_CONNECTION_SOURCE,
     ];
     $request->includingJobId = 910073;
     $request->pagination = new Pagination();

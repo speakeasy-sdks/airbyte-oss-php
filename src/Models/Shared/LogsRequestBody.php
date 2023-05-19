@@ -14,14 +14,14 @@ class LogsRequestBody
     /**
      * type/source of logs produced
      * 
-     * @var \airbyte\airbyte_oss\Models\Shared\LogTypeEnum $logType
+     * @var \airbyte\airbyte_oss\Models\Shared\LogType $logType
      */
 	#[\JMS\Serializer\Annotation\SerializedName('logType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\LogTypeEnum>')]
-    public LogTypeEnum $logType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\LogType>')]
+    public LogType $logType;
     
 	public function __construct()
 	{
-		$this->logType = \airbyte\airbyte_oss\Models\Shared\LogTypeEnum::SERVER;
+		$this->logType = \airbyte\airbyte_oss\Models\Shared\LogType::SERVER;
 	}
 }

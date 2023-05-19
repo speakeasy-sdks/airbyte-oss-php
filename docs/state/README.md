@@ -27,7 +27,7 @@ use \airbyte\airbyte_oss\Models\Shared\ConnectionState;
 use \airbyte\airbyte_oss\Models\Shared\GlobalState;
 use \airbyte\airbyte_oss\Models\Shared\StreamState;
 use \airbyte\airbyte_oss\Models\Shared\StreamDescriptor;
-use \airbyte\airbyte_oss\Models\Shared\ConnectionStateTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\ConnectionStateType;
 
 $sdk = SDK::builder()
     ->build();
@@ -51,7 +51,7 @@ try {
         'dolor' => 'occaecati',
         'quibusdam' => 'magni',
     ];
-    $request->connectionState->stateType = ConnectionStateTypeEnum::GLOBAL;
+    $request->connectionState->stateType = ConnectionStateType::GLOBAL;
     $request->connectionState->streamState = [
         new StreamState(),
     ];

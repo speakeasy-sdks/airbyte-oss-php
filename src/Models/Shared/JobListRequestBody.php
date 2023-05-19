@@ -18,10 +18,10 @@ class JobListRequestBody
     /**
      * $configTypes
      * 
-     * @var array<\airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum> $configTypes
+     * @var array<\airbyte\airbyte_oss\Models\Shared\JobConfigType> $configTypes
      */
 	#[\JMS\Serializer\Annotation\SerializedName('configTypes')]
-    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\JobConfigTypeEnum>>')]
+    #[\JMS\Serializer\Annotation\Type('array<enum<airbyte\airbyte_oss\Models\Shared\JobConfigType>>')]
     public array $configTypes;
     
 	#[\JMS\Serializer\Annotation\SerializedName('includingJobId')]

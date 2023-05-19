@@ -18,7 +18,7 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\Notification;
-use \airbyte\airbyte_oss\Models\Shared\NotificationTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\NotificationType;
 use \airbyte\airbyte_oss\Models\Shared\SlackNotificationConfiguration;
 
 $sdk = SDK::builder()
@@ -29,7 +29,7 @@ try {
     $request->customerioConfiguration = [
         'qui' => 'necessitatibus',
     ];
-    $request->notificationType = NotificationTypeEnum::CUSTOMERIO;
+    $request->notificationType = NotificationType::CUSTOMERIO;
     $request->sendOnFailure = false;
     $request->sendOnSuccess = false;
     $request->slackConfiguration = new SlackNotificationConfiguration();

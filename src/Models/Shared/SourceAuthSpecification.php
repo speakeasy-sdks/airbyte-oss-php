@@ -12,9 +12,9 @@ namespace airbyte\airbyte_oss\Models\Shared;
 class SourceAuthSpecification
 {
 	#[\JMS\Serializer\Annotation\SerializedName('auth_type')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SourceAuthSpecificationAuthTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\SourceAuthSpecificationAuthType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?SourceAuthSpecificationAuthTypeEnum $authType = null;
+    public ?SourceAuthSpecificationAuthType $authType = null;
     
     /**
      * An object containing any metadata needed to describe this connector's Oauth flow

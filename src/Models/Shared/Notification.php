@@ -22,8 +22,8 @@ class Notification
     public ?array $customerioConfiguration = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notificationType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NotificationTypeEnum>')]
-    public NotificationTypeEnum $notificationType;
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NotificationType>')]
+    public NotificationType $notificationType;
     
 	#[\JMS\Serializer\Annotation\SerializedName('sendOnFailure')]
     #[\JMS\Serializer\Annotation\Type('bool')]
@@ -41,7 +41,7 @@ class Notification
 	public function __construct()
 	{
 		$this->customerioConfiguration = null;
-		$this->notificationType = \airbyte\airbyte_oss\Models\Shared\NotificationTypeEnum::SLACK;
+		$this->notificationType = \airbyte\airbyte_oss\Models\Shared\NotificationType::SLACK;
 		$this->sendOnFailure = false;
 		$this->sendOnSuccess = false;
 		$this->slackConfiguration = null;

@@ -30,9 +30,9 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\WorkspaceCreate;
-use \airbyte\airbyte_oss\Models\Shared\GeographyEnum;
+use \airbyte\airbyte_oss\Models\Shared\Geography;
 use \airbyte\airbyte_oss\Models\Shared\Notification;
-use \airbyte\airbyte_oss\Models\Shared\NotificationTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\NotificationType;
 use \airbyte\airbyte_oss\Models\Shared\SlackNotificationConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\WebhookConfigWrite;
 
@@ -42,7 +42,7 @@ $sdk = SDK::builder()
 try {
     $request = new WorkspaceCreate();
     $request->anonymousDataCollection = false;
-    $request->defaultGeography = GeographyEnum::AUTO;
+    $request->defaultGeography = Geography::AUTO;
     $request->displaySetupWizard = false;
     $request->email = 'Clair.Leannon72@hotmail.com';
     $request->name = 'Dr. Emilio McDermott';
@@ -236,9 +236,9 @@ require_once 'vendor/autoload.php';
 
 use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\WorkspaceUpdate;
-use \airbyte\airbyte_oss\Models\Shared\GeographyEnum;
+use \airbyte\airbyte_oss\Models\Shared\Geography;
 use \airbyte\airbyte_oss\Models\Shared\Notification;
-use \airbyte\airbyte_oss\Models\Shared\NotificationTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\NotificationType;
 use \airbyte\airbyte_oss\Models\Shared\SlackNotificationConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\WebhookConfigWrite;
 
@@ -248,7 +248,7 @@ $sdk = SDK::builder()
 try {
     $request = new WorkspaceUpdate();
     $request->anonymousDataCollection = false;
-    $request->defaultGeography = GeographyEnum::EU;
+    $request->defaultGeography = Geography::EU;
     $request->displaySetupWizard = false;
     $request->email = 'Ayden_Cronin@hotmail.com';
     $request->initialSetupComplete = false;

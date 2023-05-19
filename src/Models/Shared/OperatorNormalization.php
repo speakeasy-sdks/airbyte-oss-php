@@ -12,9 +12,9 @@ namespace airbyte\airbyte_oss\Models\Shared;
 class OperatorNormalization
 {
 	#[\JMS\Serializer\Annotation\SerializedName('option')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOptionEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOption>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OperatorNormalizationOptionEnum $option = null;
+    public ?OperatorNormalizationOption $option = null;
     
 	public function __construct()
 	{

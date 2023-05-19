@@ -47,9 +47,9 @@ class OperatorWebhook
     public ?string $webhookConfigId = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('webhookType')]
-    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookTypeEnum>')]
+    #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookType>')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?OperatorWebhookWebhookTypeEnum $webhookType = null;
+    public ?OperatorWebhookWebhookType $webhookType = null;
     
 	public function __construct()
 	{

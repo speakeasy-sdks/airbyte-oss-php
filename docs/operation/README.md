@@ -25,11 +25,11 @@ use \airbyte\airbyte_oss\SDK;
 use \airbyte\airbyte_oss\Models\Shared\OperatorConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\OperatorDbt;
 use \airbyte\airbyte_oss\Models\Shared\OperatorNormalization;
-use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOptionEnum;
-use \airbyte\airbyte_oss\Models\Shared\OperatorTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOption;
+use \airbyte\airbyte_oss\Models\Shared\OperatorType;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhook;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookDbtCloud;
-use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookType;
 
 $sdk = SDK::builder()
     ->build();
@@ -42,8 +42,8 @@ try {
     $request->dbt->gitRepoBranch = 'modi';
     $request->dbt->gitRepoUrl = 'optio';
     $request->normalization = new OperatorNormalization();
-    $request->normalization->option = OperatorNormalizationOptionEnum::BASIC;
-    $request->operatorType = OperatorTypeEnum::WEBHOOK;
+    $request->normalization->option = OperatorNormalizationOption::BASIC;
+    $request->operatorType = OperatorType::WEBHOOK;
     $request->webhook = new OperatorWebhook();
     $request->webhook->dbtCloud = new OperatorWebhookDbtCloud();
     $request->webhook->dbtCloud->accountId = 562948;
@@ -51,7 +51,7 @@ try {
     $request->webhook->executionBody = 'libero';
     $request->webhook->executionUrl = 'totam';
     $request->webhook->webhookConfigId = '366c723f-fda9-4e06-bee4-825c1fc0e115';
-    $request->webhook->webhookType = OperatorWebhookWebhookTypeEnum::DBT_CLOUD;
+    $request->webhook->webhookType = OperatorWebhookWebhookType::DBT_CLOUD;
 
     $response = $sdk->operation->checkOperation($request);
 
@@ -80,11 +80,11 @@ use \airbyte\airbyte_oss\Models\Shared\OperationCreate;
 use \airbyte\airbyte_oss\Models\Shared\OperatorConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\OperatorDbt;
 use \airbyte\airbyte_oss\Models\Shared\OperatorNormalization;
-use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOptionEnum;
-use \airbyte\airbyte_oss\Models\Shared\OperatorTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOption;
+use \airbyte\airbyte_oss\Models\Shared\OperatorType;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhook;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookDbtCloud;
-use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookType;
 
 $sdk = SDK::builder()
     ->build();
@@ -99,8 +99,8 @@ try {
     $request->operatorConfiguration->dbt->gitRepoBranch = 'dicta';
     $request->operatorConfiguration->dbt->gitRepoUrl = 'quos';
     $request->operatorConfiguration->normalization = new OperatorNormalization();
-    $request->operatorConfiguration->normalization->option = OperatorNormalizationOptionEnum::BASIC;
-    $request->operatorConfiguration->operatorType = OperatorTypeEnum::DBT;
+    $request->operatorConfiguration->normalization->option = OperatorNormalizationOption::BASIC;
+    $request->operatorConfiguration->operatorType = OperatorType::DBT;
     $request->operatorConfiguration->webhook = new OperatorWebhook();
     $request->operatorConfiguration->webhook->dbtCloud = new OperatorWebhookDbtCloud();
     $request->operatorConfiguration->webhook->dbtCloud->accountId = 295950;
@@ -108,7 +108,7 @@ try {
     $request->operatorConfiguration->webhook->executionBody = 'itaque';
     $request->operatorConfiguration->webhook->executionUrl = 'maxime';
     $request->operatorConfiguration->webhook->webhookConfigId = '42defcce-8f19-4777-b3e6-3562a7b408f0';
-    $request->operatorConfiguration->webhook->webhookType = OperatorWebhookWebhookTypeEnum::DBT_CLOUD;
+    $request->operatorConfiguration->webhook->webhookType = OperatorWebhookWebhookType::DBT_CLOUD;
     $request->workspaceId = '5e3d48fd-af31-43a1-b5fd-94259c0b36f2';
 
     $response = $sdk->operation->createOperation($request);
@@ -234,11 +234,11 @@ use \airbyte\airbyte_oss\Models\Shared\OperationUpdate;
 use \airbyte\airbyte_oss\Models\Shared\OperatorConfiguration;
 use \airbyte\airbyte_oss\Models\Shared\OperatorDbt;
 use \airbyte\airbyte_oss\Models\Shared\OperatorNormalization;
-use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOptionEnum;
-use \airbyte\airbyte_oss\Models\Shared\OperatorTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorNormalizationOption;
+use \airbyte\airbyte_oss\Models\Shared\OperatorType;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhook;
 use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookDbtCloud;
-use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookTypeEnum;
+use \airbyte\airbyte_oss\Models\Shared\OperatorWebhookWebhookType;
 
 $sdk = SDK::builder()
     ->build();
@@ -254,8 +254,8 @@ try {
     $request->operatorConfiguration->dbt->gitRepoBranch = 'fugit';
     $request->operatorConfiguration->dbt->gitRepoUrl = 'aliquid';
     $request->operatorConfiguration->normalization = new OperatorNormalization();
-    $request->operatorConfiguration->normalization->option = OperatorNormalizationOptionEnum::BASIC;
-    $request->operatorConfiguration->operatorType = OperatorTypeEnum::NORMALIZATION;
+    $request->operatorConfiguration->normalization->option = OperatorNormalizationOption::BASIC;
+    $request->operatorConfiguration->operatorType = OperatorType::NORMALIZATION;
     $request->operatorConfiguration->webhook = new OperatorWebhook();
     $request->operatorConfiguration->webhook->dbtCloud = new OperatorWebhookDbtCloud();
     $request->operatorConfiguration->webhook->dbtCloud->accountId = 308528;
@@ -263,7 +263,7 @@ try {
     $request->operatorConfiguration->webhook->executionBody = 'hic';
     $request->operatorConfiguration->webhook->executionUrl = 'nostrum';
     $request->operatorConfiguration->webhook->webhookConfigId = 'e9d9a457-8adc-41ac-a00d-ec001ac802e2';
-    $request->operatorConfiguration->webhook->webhookType = OperatorWebhookWebhookTypeEnum::DBT_CLOUD;
+    $request->operatorConfiguration->webhook->webhookType = OperatorWebhookWebhookType::DBT_CLOUD;
 
     $response = $sdk->operation->updateOperation($request);
 
