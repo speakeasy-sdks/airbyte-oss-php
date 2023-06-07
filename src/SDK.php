@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace airbyte\airbyte_oss;
 
 /**
- * SDK - Airbyte Configuration API
+ * SDK - Airbyte Configuration API: Airbyte Configuration API
  * 
  * [https://airbyte.io](https://airbyte.io).
  * 
