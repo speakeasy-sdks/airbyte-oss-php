@@ -41,7 +41,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
@@ -88,7 +88,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
@@ -135,7 +135,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
@@ -184,7 +184,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
@@ -239,7 +239,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0.7, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
@@ -292,7 +292,7 @@ class Operation
         }
         $options = array_merge_recursive($options, $body);
         $options['headers']['Accept'] = 'application/json;q=1, application/json;q=0';
-        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion);
+        $options['headers']['user-agent'] = sprintf('speakeasy-sdk/%s %s %s %s', $this->sdkConfiguration->language, $this->sdkConfiguration->sdkVersion, $this->sdkConfiguration->genVersion, $this->sdkConfiguration->openapiDocVersion);
         
         $httpResponse = $this->sdkConfiguration->defaultClient->request('POST', $url, $options);
         
