@@ -30,12 +30,12 @@ class SourceDefinitionSpecificationRead
     /**
      * The specification for what values are required to configure the sourceDefinition.
      * 
-     * @var ?array<string, mixed> $connectionSpecification
+     * @var ?\airbyte\airbyte_oss\Models\Shared\SourceDefinitionSpecification $connectionSpecification
      */
 	#[\JMS\Serializer\Annotation\SerializedName('connectionSpecification')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\SourceDefinitionSpecification')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $connectionSpecification = null;
+    public ?SourceDefinitionSpecification $connectionSpecification = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('documentationUrl')]
     #[\JMS\Serializer\Annotation\Type('string')]

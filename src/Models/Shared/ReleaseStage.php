@@ -11,8 +11,8 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum ReleaseStage: string
 {
-    case ALPHA = 'alpha';
-    case BETA = 'beta';
-    case GENERALLY_AVAILABLE = 'generally_available';
-    case CUSTOM = 'custom';
+    case Alpha = 'alpha';
+    case Beta = 'beta';
+    case GenerallyAvailable = 'generally_available';
+    case Custom = 'custom';
 }

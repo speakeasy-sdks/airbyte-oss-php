@@ -11,9 +11,9 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum ConnectionScheduleTimeUnit: string
 {
-    case MINUTES = 'minutes';
-    case HOURS = 'hours';
-    case DAYS = 'days';
-    case WEEKS = 'weeks';
-    case MONTHS = 'months';
+    case Minutes = 'minutes';
+    case Hours = 'hours';
+    case Days = 'days';
+    case Weeks = 'weeks';
+    case Months = 'months';
 }

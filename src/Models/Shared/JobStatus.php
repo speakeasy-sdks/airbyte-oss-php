@@ -11,10 +11,10 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum JobStatus: string
 {
-    case PENDING = 'pending';
-    case RUNNING = 'running';
-    case INCOMPLETE = 'incomplete';
-    case FAILED = 'failed';
-    case SUCCEEDED = 'succeeded';
-    case CANCELLED = 'cancelled';
+    case Pending = 'pending';
+    case Running = 'running';
+    case Incomplete = 'incomplete';
+    case Failed = 'failed';
+    case Succeeded = 'succeeded';
+    case Cancelled = 'cancelled';
 }

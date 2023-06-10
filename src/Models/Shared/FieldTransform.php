@@ -55,7 +55,7 @@ class FieldTransform
 		$this->breaking = false;
 		$this->fieldName = [];
 		$this->removeField = null;
-		$this->transformType = \airbyte\airbyte_oss\Models\Shared\FieldTransformTransformType::ADD_FIELD;
+		$this->transformType = \airbyte\airbyte_oss\Models\Shared\FieldTransformTransformType::AddField;
 		$this->updateFieldSchema = null;
 	}
 }

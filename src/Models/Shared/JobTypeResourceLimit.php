@@ -37,7 +37,7 @@ class JobTypeResourceLimit
     
 	public function __construct()
 	{
-		$this->jobType = \airbyte\airbyte_oss\Models\Shared\JobType::GET_SPEC;
+		$this->jobType = \airbyte\airbyte_oss\Models\Shared\JobType::GetSpec;
 		$this->resourceRequirements = new \airbyte\airbyte_oss\Models\Shared\ResourceRequirements();
 	}
 }

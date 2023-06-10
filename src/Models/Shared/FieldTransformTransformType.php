@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum FieldTransformTransformType: string
 {
-    case ADD_FIELD = 'add_field';
-    case REMOVE_FIELD = 'remove_field';
-    case UPDATE_FIELD_SCHEMA = 'update_field_schema';
+    case AddField = 'add_field';
+    case RemoveField = 'remove_field';
+    case UpdateFieldSchema = 'update_field_schema';
 }

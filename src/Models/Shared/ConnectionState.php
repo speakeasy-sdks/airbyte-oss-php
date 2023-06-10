@@ -26,15 +26,10 @@ class ConnectionState
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
     public ?GlobalState $globalState = null;
     
-    /**
-     * $state
-     * 
-     * @var ?array<string, mixed> $state
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('state')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\StateBlob')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $state = null;
+    public ?StateBlob $state = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('stateType')]
     #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\ConnectionStateType>')]
@@ -55,7 +50,7 @@ class ConnectionState
 		$this->connectionId = "";
 		$this->globalState = null;
 		$this->state = null;
-		$this->stateType = \airbyte\airbyte_oss\Models\Shared\ConnectionStateType::GLOBAL;
+		$this->stateType = \airbyte\airbyte_oss\Models\Shared\ConnectionStateType::Global;
 		$this->streamState = null;
 	}
 }

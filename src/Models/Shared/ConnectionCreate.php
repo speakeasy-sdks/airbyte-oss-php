@@ -165,7 +165,7 @@ class ConnectionCreate
 		$this->scheduleType = null;
 		$this->sourceCatalogId = null;
 		$this->sourceId = "";
-		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::ACTIVE;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::Active;
 		$this->syncCatalog = null;
 	}
 }

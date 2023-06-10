@@ -17,15 +17,10 @@ namespace airbyte\airbyte_oss\Models\Shared;
  */
 class ActorCatalogWithUpdatedAt
 {
-    /**
-     * $catalog
-     * 
-     * @var ?array<string, mixed> $catalog
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('catalog')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\ActorCatalogWithUpdatedAtCatalog')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $catalog = null;
+    public ?ActorCatalogWithUpdatedAtCatalog $catalog = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('updatedAt')]
     #[\JMS\Serializer\Annotation\Type('int')]

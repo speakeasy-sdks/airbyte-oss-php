@@ -12,7 +12,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** determine how the schedule data should be interpreted */
 enum ConnectionScheduleType: string
 {
-    case MANUAL = 'manual';
-    case BASIC = 'basic';
-    case CRON = 'cron';
+    case Manual = 'manual';
+    case Basic = 'basic';
+    case Cron = 'cron';
 }

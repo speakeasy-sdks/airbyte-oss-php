@@ -15,15 +15,10 @@ class StreamState
     #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\StreamDescriptor')]
     public StreamDescriptor $streamDescriptor;
     
-    /**
-     * $streamState
-     * 
-     * @var ?array<string, mixed> $streamState
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('streamState')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\StateBlob')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $streamState = null;
+    public ?StateBlob $streamState = null;
     
 	public function __construct()
 	{

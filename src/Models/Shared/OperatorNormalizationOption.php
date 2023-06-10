@@ -11,5 +11,5 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum OperatorNormalizationOption: string
 {
-    case BASIC = 'basic';
+    case Basic = 'basic';
 }

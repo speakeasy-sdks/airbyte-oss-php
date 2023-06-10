@@ -12,7 +12,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** Method used for computing final namespace in destination */
 enum NamespaceDefinitionType: string
 {
-    case SOURCE = 'source';
-    case DESTINATION = 'destination';
-    case CUSTOMFORMAT = 'customformat';
+    case Source = 'source';
+    case Destination = 'destination';
+    case Customformat = 'customformat';
 }

@@ -29,6 +29,6 @@ class CheckOperationRead
 	public function __construct()
 	{
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatus::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckOperationReadStatus::Succeeded;
 	}
 }

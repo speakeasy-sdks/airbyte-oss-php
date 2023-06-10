@@ -1,0 +1,16 @@
+# WorkspaceCreate
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `anonymousDataCollection`                                              | *?bool*                                                                | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `defaultGeography`                                                     | [?Geography](../../models/shared/Geography.md)                         | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `displaySetupWizard`                                                   | *?bool*                                                                | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `email`                                                                | *?string*                                                              | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `name`                                                                 | *string*                                                               | :heavy_check_mark:                                                     | N/A                                                                    |
+| `news`                                                                 | *?bool*                                                                | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `notifications`                                                        | array<[Notification](../../models/shared/Notification.md)>             | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `securityUpdates`                                                      | *?bool*                                                                | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `webhookConfigs`                                                       | array<[WebhookConfigWrite](../../models/shared/WebhookConfigWrite.md)> | :heavy_minus_sign:                                                     | N/A                                                                    |

@@ -53,12 +53,12 @@ class JobRead
 	public function __construct()
 	{
 		$this->configId = "";
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CheckConnectionSource;
 		$this->createdAt = 0;
 		$this->id = 0;
 		$this->resetConfig = null;
 		$this->startedAt = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::PENDING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::Pending;
 		$this->updatedAt = 0;
 	}
 }

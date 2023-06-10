@@ -12,7 +12,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced. */
 enum ConnectionStatus: string
 {
-    case ACTIVE = 'active';
-    case INACTIVE = 'inactive';
-    case DEPRECATED = 'deprecated';
+    case Active = 'active';
+    case Inactive = 'inactive';
+    case Deprecated = 'deprecated';
 }

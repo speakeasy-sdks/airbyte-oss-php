@@ -95,8 +95,8 @@ class WebBackendConnectionListItem
 		$this->name = "";
 		$this->scheduleData = null;
 		$this->scheduleType = null;
-		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChange::NO_CHANGE;
+		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChange::NoChange;
 		$this->source = new \airbyte\airbyte_oss\Models\Shared\SourceSnippetRead();
-		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::ACTIVE;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::Active;
 	}
 }

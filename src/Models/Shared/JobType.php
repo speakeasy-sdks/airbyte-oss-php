@@ -12,11 +12,11 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** enum that describes the different types of jobs that the platform runs. */
 enum JobType: string
 {
-    case GET_SPEC = 'get_spec';
-    case CHECK_CONNECTION = 'check_connection';
-    case DISCOVER_SCHEMA = 'discover_schema';
-    case SYNC = 'sync';
-    case RESET_CONNECTION = 'reset_connection';
-    case CONNECTION_UPDATER = 'connection_updater';
-    case REPLICATE = 'replicate';
+    case GetSpec = 'get_spec';
+    case CheckConnection = 'check_connection';
+    case DiscoverSchema = 'discover_schema';
+    case Sync = 'sync';
+    case ResetConnection = 'reset_connection';
+    case ConnectionUpdater = 'connection_updater';
+    case Replicate = 'replicate';
 }

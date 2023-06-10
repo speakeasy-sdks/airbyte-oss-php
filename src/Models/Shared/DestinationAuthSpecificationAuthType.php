@@ -11,5 +11,5 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum DestinationAuthSpecificationAuthType: string
 {
-    case OAUTH20 = 'oauth2.0';
+    case Oauth20 = 'oauth2.0';
 }

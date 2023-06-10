@@ -30,12 +30,12 @@ class AirbyteStream
     /**
      * Stream schema using Json Schema specs.
      * 
-     * @var ?array<string, mixed> $jsonSchema
+     * @var ?\airbyte\airbyte_oss\Models\Shared\StreamJsonSchema $jsonSchema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('jsonSchema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\StreamJsonSchema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $jsonSchema = null;
+    public ?StreamJsonSchema $jsonSchema = null;
     
     /**
      * Stream's name.

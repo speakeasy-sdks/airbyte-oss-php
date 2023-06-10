@@ -12,8 +12,8 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** Successful operation */
 enum ConnectionStateType: string
 {
-    case GLOBAL = 'global';
-    case STREAM = 'stream';
-    case LEGACY = 'legacy';
-    case NOT_SET = 'not_set';
+    case Global = 'global';
+    case Stream = 'stream';
+    case Legacy = 'legacy';
+    case NotSet = 'not_set';
 }

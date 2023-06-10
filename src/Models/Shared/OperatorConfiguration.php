@@ -34,7 +34,7 @@ class OperatorConfiguration
 	{
 		$this->dbt = null;
 		$this->normalization = null;
-		$this->operatorType = \airbyte\airbyte_oss\Models\Shared\OperatorType::NORMALIZATION;
+		$this->operatorType = \airbyte\airbyte_oss\Models\Shared\OperatorType::Normalization;
 		$this->webhook = null;
 	}
 }

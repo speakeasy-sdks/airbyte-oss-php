@@ -29,6 +29,6 @@ class NotificationRead
 	public function __construct()
 	{
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\NotificationReadStatus::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\NotificationReadStatus::Succeeded;
 	}
 }

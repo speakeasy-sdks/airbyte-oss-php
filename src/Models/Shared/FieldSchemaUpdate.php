@@ -14,24 +14,24 @@ class FieldSchemaUpdate
     /**
      * JSONSchema representation of the field
      * 
-     * @var array<string, mixed> $newSchema
+     * @var \airbyte\airbyte_oss\Models\Shared\FieldSchema $newSchema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('newSchema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
-    public array $newSchema;
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\FieldSchema')]
+    public FieldSchema $newSchema;
     
     /**
      * JSONSchema representation of the field
      * 
-     * @var array<string, mixed> $oldSchema
+     * @var \airbyte\airbyte_oss\Models\Shared\FieldSchema $oldSchema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('oldSchema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
-    public array $oldSchema;
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\FieldSchema')]
+    public FieldSchema $oldSchema;
     
 	public function __construct()
 	{
-		$this->newSchema = [];
-		$this->oldSchema = [];
+		$this->newSchema = new \airbyte\airbyte_oss\Models\Shared\FieldSchema();
+		$this->oldSchema = new \airbyte\airbyte_oss\Models\Shared\FieldSchema();
 	}
 }

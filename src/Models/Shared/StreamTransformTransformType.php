@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum StreamTransformTransformType: string
 {
-    case ADD_STREAM = 'add_stream';
-    case REMOVE_STREAM = 'remove_stream';
-    case UPDATE_STREAM = 'update_stream';
+    case AddStream = 'add_stream';
+    case RemoveStream = 'remove_stream';
+    case UpdateStream = 'update_stream';
 }

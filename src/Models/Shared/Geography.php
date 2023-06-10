@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum Geography: string
 {
-    case AUTO = 'auto';
-    case US = 'us';
-    case EU = 'eu';
+    case Auto = 'auto';
+    case Us = 'us';
+    case Eu = 'eu';
 }

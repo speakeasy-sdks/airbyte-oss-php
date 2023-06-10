@@ -12,12 +12,12 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** Indicates where the error originated. If not set, the origin of error is not well known. */
 enum AttemptFailureOrigin: string
 {
-    case SOURCE = 'source';
-    case DESTINATION = 'destination';
-    case REPLICATION = 'replication';
-    case PERSISTENCE = 'persistence';
-    case NORMALIZATION = 'normalization';
-    case DBT = 'dbt';
-    case AIRBYTE_PLATFORM = 'airbyte_platform';
-    case UNKNOWN = 'unknown';
+    case Source = 'source';
+    case Destination = 'destination';
+    case Replication = 'replication';
+    case Persistence = 'persistence';
+    case Normalization = 'normalization';
+    case Dbt = 'dbt';
+    case AirbytePlatform = 'airbyte_platform';
+    case Unknown = 'unknown';
 }

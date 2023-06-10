@@ -11,8 +11,8 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum SourceDefinitionReadSourceType: string
 {
-    case API = 'api';
-    case FILE = 'file';
-    case DATABASE = 'database';
-    case CUSTOM = 'custom';
+    case Api = 'api';
+    case File = 'file';
+    case Database = 'database';
+    case Custom = 'custom';
 }

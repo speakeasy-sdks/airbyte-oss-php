@@ -11,6 +11,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum SyncMode: string
 {
-    case FULL_REFRESH = 'full_refresh';
-    case INCREMENTAL = 'incremental';
+    case FullRefresh = 'full_refresh';
+    case Incremental = 'incremental';
 }

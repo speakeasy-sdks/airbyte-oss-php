@@ -99,12 +99,12 @@ class AirbyteStreamConfiguration
 	{
 		$this->aliasName = null;
 		$this->cursorField = null;
-		$this->destinationSyncMode = \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode::APPEND;
+		$this->destinationSyncMode = \airbyte\airbyte_oss\Models\Shared\DestinationSyncMode::Append;
 		$this->fieldSelectionEnabled = null;
 		$this->primaryKey = null;
 		$this->selected = null;
 		$this->selectedFields = null;
 		$this->suggested = null;
-		$this->syncMode = \airbyte\airbyte_oss\Models\Shared\SyncMode::FULL_REFRESH;
+		$this->syncMode = \airbyte\airbyte_oss\Models\Shared\SyncMode::FullRefresh;
 	}
 }

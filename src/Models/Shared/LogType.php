@@ -12,6 +12,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** type/source of logs produced */
 enum LogType: string
 {
-    case SERVER = 'server';
-    case SCHEDULER = 'scheduler';
+    case Server = 'server';
+    case Scheduler = 'scheduler';
 }

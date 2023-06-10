@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum AttemptStatus: string
 {
-    case RUNNING = 'running';
-    case FAILED = 'failed';
-    case SUCCEEDED = 'succeeded';
+    case Running = 'running';
+    case Failed = 'failed';
+    case Succeeded = 'succeeded';
 }

@@ -214,7 +214,7 @@ class WebBackendConnectionRead
 		$this->name = "";
 		$this->namespaceDefinition = null;
 		$this->namespaceFormat = null;
-		$this->nonBreakingChangesPreference = \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference::IGNORE;
+		$this->nonBreakingChangesPreference = \airbyte\airbyte_oss\Models\Shared\NonBreakingChangesPreference::Ignore;
 		$this->notifySchemaChanges = false;
 		$this->operationIds = null;
 		$this->operations = null;
@@ -223,10 +223,10 @@ class WebBackendConnectionRead
 		$this->schedule = null;
 		$this->scheduleData = null;
 		$this->scheduleType = null;
-		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChange::NO_CHANGE;
+		$this->schemaChange = \airbyte\airbyte_oss\Models\Shared\SchemaChange::NoChange;
 		$this->source = new \airbyte\airbyte_oss\Models\Shared\SourceRead();
 		$this->sourceId = "";
-		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::ACTIVE;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\ConnectionStatus::Active;
 		$this->syncCatalog = new \airbyte\airbyte_oss\Models\Shared\AirbyteCatalog();
 	}
 }

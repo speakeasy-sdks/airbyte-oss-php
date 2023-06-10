@@ -11,6 +11,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum NonBreakingChangesPreference: string
 {
-    case IGNORE = 'ignore';
-    case DISABLE = 'disable';
+    case Ignore = 'ignore';
+    case Disable = 'disable';
 }

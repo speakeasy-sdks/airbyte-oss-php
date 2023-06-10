@@ -11,10 +11,10 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum JobConfigType: string
 {
-    case CHECK_CONNECTION_SOURCE = 'check_connection_source';
-    case CHECK_CONNECTION_DESTINATION = 'check_connection_destination';
-    case DISCOVER_SCHEMA = 'discover_schema';
-    case GET_SPEC = 'get_spec';
-    case SYNC = 'sync';
-    case RESET_CONNECTION = 'reset_connection';
+    case CheckConnectionSource = 'check_connection_source';
+    case CheckConnectionDestination = 'check_connection_destination';
+    case DiscoverSchema = 'discover_schema';
+    case GetSpec = 'get_spec';
+    case Sync = 'sync';
+    case ResetConnection = 'reset_connection';
 }

@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum DestinationSyncMode: string
 {
-    case APPEND = 'append';
-    case OVERWRITE = 'overwrite';
-    case APPEND_DEDUP = 'append_dedup';
+    case Append = 'append';
+    case Overwrite = 'overwrite';
+    case AppendDedup = 'append_dedup';
 }

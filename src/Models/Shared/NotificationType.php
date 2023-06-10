@@ -11,6 +11,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum NotificationType: string
 {
-    case SLACK = 'slack';
-    case CUSTOMERIO = 'customerio';
+    case Slack = 'slack';
+    case Customerio = 'customerio';
 }

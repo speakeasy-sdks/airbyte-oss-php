@@ -11,6 +11,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum NotificationReadStatus: string
 {
-    case SUCCEEDED = 'succeeded';
-    case FAILED = 'failed';
+    case Succeeded = 'succeeded';
+    case Failed = 'failed';
 }

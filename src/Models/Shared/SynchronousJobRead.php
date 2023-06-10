@@ -54,7 +54,7 @@ class SynchronousJobRead
 	public function __construct()
 	{
 		$this->configId = null;
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CheckConnectionSource;
 		$this->connectorConfigurationUpdated = null;
 		$this->createdAt = 0;
 		$this->endedAt = 0;

@@ -34,6 +34,6 @@ class CheckConnectionRead
 	{
 		$this->jobInfo = new \airbyte\airbyte_oss\Models\Shared\SynchronousJobRead();
 		$this->message = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatus::SUCCEEDED;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\CheckConnectionReadStatus::Succeeded;
 	}
 }

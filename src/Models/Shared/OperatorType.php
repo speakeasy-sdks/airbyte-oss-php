@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum OperatorType: string
 {
-    case NORMALIZATION = 'normalization';
-    case DBT = 'dbt';
-    case WEBHOOK = 'webhook';
+    case Normalization = 'normalization';
+    case Dbt = 'dbt';
+    case Webhook = 'webhook';
 }

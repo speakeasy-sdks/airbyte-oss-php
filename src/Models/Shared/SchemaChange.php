@@ -11,7 +11,7 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum SchemaChange: string
 {
-    case NO_CHANGE = 'no_change';
-    case NON_BREAKING = 'non_breaking';
-    case BREAKING = 'breaking';
+    case NoChange = 'no_change';
+    case NonBreaking = 'non_breaking';
+    case Breaking = 'breaking';
 }

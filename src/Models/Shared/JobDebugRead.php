@@ -43,10 +43,10 @@ class JobDebugRead
 	{
 		$this->airbyteVersion = "";
 		$this->configId = "";
-		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CHECK_CONNECTION_SOURCE;
+		$this->configType = \airbyte\airbyte_oss\Models\Shared\JobConfigType::CheckConnectionSource;
 		$this->destinationDefinition = new \airbyte\airbyte_oss\Models\Shared\DestinationDefinitionRead();
 		$this->id = 0;
 		$this->sourceDefinition = new \airbyte\airbyte_oss\Models\Shared\SourceDefinitionRead();
-		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::PENDING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\JobStatus::Pending;
 	}
 }

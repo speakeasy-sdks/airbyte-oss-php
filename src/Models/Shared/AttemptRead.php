@@ -70,7 +70,7 @@ class AttemptRead
 		$this->failureSummary = null;
 		$this->id = 0;
 		$this->recordsSynced = null;
-		$this->status = \airbyte\airbyte_oss\Models\Shared\AttemptStatus::RUNNING;
+		$this->status = \airbyte\airbyte_oss\Models\Shared\AttemptStatus::Running;
 		$this->streamStats = null;
 		$this->totalStats = null;
 		$this->updatedAt = 0;

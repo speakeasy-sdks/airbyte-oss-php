@@ -32,7 +32,7 @@ class StreamTransform
 	public function __construct()
 	{
 		$this->streamDescriptor = new \airbyte\airbyte_oss\Models\Shared\StreamDescriptor();
-		$this->transformType = \airbyte\airbyte_oss\Models\Shared\StreamTransformTransformType::ADD_STREAM;
+		$this->transformType = \airbyte\airbyte_oss\Models\Shared\StreamTransformTransformType::AddStream;
 		$this->updateStream = null;
 	}
 }

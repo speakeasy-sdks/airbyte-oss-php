@@ -11,15 +11,10 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 class Notification
 {
-    /**
-     * $customerioConfiguration
-     * 
-     * @var ?array<string, mixed> $customerioConfiguration
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('customerioConfiguration')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\CustomerioNotificationConfiguration')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $customerioConfiguration = null;
+    public ?CustomerioNotificationConfiguration $customerioConfiguration = null;
     
 	#[\JMS\Serializer\Annotation\SerializedName('notificationType')]
     #[\JMS\Serializer\Annotation\Type('enum<airbyte\airbyte_oss\Models\Shared\NotificationType>')]
@@ -41,7 +36,7 @@ class Notification
 	public function __construct()
 	{
 		$this->customerioConfiguration = null;
-		$this->notificationType = \airbyte\airbyte_oss\Models\Shared\NotificationType::SLACK;
+		$this->notificationType = \airbyte\airbyte_oss\Models\Shared\NotificationType::Slack;
 		$this->sendOnFailure = false;
 		$this->sendOnSuccess = false;
 		$this->slackConfiguration = null;

@@ -11,6 +11,6 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum AdvancedAuthAuthFlowType: string
 {
-    case OAUTH20 = 'oauth2.0';
-    case OAUTH10 = 'oauth1.0';
+    case Oauth20 = 'oauth2.0';
+    case Oauth10 = 'oauth1.0';
 }

@@ -27,7 +27,7 @@ class ConnectionSchedule
     
 	public function __construct()
 	{
-		$this->timeUnit = \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit::MINUTES;
+		$this->timeUnit = \airbyte\airbyte_oss\Models\Shared\ConnectionScheduleTimeUnit::Minutes;
 		$this->units = 0;
 	}
 }

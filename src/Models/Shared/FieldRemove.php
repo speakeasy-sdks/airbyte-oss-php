@@ -14,12 +14,12 @@ class FieldRemove
     /**
      * JSONSchema representation of the field
      * 
-     * @var ?array<string, mixed> $schema
+     * @var ?\airbyte\airbyte_oss\Models\Shared\FieldSchema $schema
      */
 	#[\JMS\Serializer\Annotation\SerializedName('schema')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\FieldSchema')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $schema = null;
+    public ?FieldSchema $schema = null;
     
 	public function __construct()
 	{

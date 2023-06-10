@@ -12,8 +12,8 @@ namespace airbyte\airbyte_oss\Models\Shared;
 /** Categorizes well known errors into types for programmatic handling. If not set, the type of error is not well known. */
 enum AttemptFailureType: string
 {
-    case CONFIG_ERROR = 'config_error';
-    case SYSTEM_ERROR = 'system_error';
-    case MANUAL_CANCELLATION = 'manual_cancellation';
-    case REFRESH_SCHEMA = 'refresh_schema';
+    case ConfigError = 'config_error';
+    case SystemError = 'system_error';
+    case ManualCancellation = 'manual_cancellation';
+    case RefreshSchema = 'refresh_schema';
 }

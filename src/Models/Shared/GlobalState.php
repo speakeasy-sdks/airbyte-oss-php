@@ -11,15 +11,10 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 class GlobalState
 {
-    /**
-     * $sharedState
-     * 
-     * @var ?array<string, mixed> $sharedState
-     */
 	#[\JMS\Serializer\Annotation\SerializedName('shared_state')]
-    #[\JMS\Serializer\Annotation\Type('array<string, mixed>')]
+    #[\JMS\Serializer\Annotation\Type('airbyte\airbyte_oss\Models\Shared\StateBlob')]
     #[\JMS\Serializer\Annotation\SkipWhenEmpty]
-    public ?array $sharedState = null;
+    public ?StateBlob $sharedState = null;
     
     /**
      * $streamStates

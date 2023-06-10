@@ -22,6 +22,6 @@ class LogsRequestBody
     
 	public function __construct()
 	{
-		$this->logType = \airbyte\airbyte_oss\Models\Shared\LogType::SERVER;
+		$this->logType = \airbyte\airbyte_oss\Models\Shared\LogType::Server;
 	}
 }

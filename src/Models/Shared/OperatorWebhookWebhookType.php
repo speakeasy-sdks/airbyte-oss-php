@@ -11,5 +11,5 @@ namespace airbyte\airbyte_oss\Models\Shared;
 
 enum OperatorWebhookWebhookType: string
 {
-    case DBT_CLOUD = 'dbtCloud';
+    case DbtCloud = 'dbtCloud';
 }
